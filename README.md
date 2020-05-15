@@ -11,20 +11,20 @@ sudo apt-get install python3-tk
 
 ### Usage
 
-Explain what these tests test and why
+
 
 ### Screenshots
 
 ```
 mandelbrot.py -s 3.5 -r 500 -i 50
 ```
-(https://i.imgur.com/1GbS5BB.png)
+![example screenshot](https://i.imgur.com/1GbS5BB.png)
 
 
 ```
 mandelbrot.py -s 1 -r 500 -i 100
 ```
-(https://i.imgur.com/TPxfUpS.png)
+![example screenshot](https://i.imgur.com/TPxfUpS.png)
 
 
 ## Built With
