@@ -1,6 +1,7 @@
 # Mandelbrot
 
 A ready-to-go script to visualize the Mandelbrot set, powered by Python 3. 
+
 Learn about the math behind the code here: (https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 ### Prerequisites
@@ -25,6 +26,7 @@ Here are some examples of the script in action:
 mandelbrot.py -s 3.5 -r 500 -i 50
 ```
 ![example screenshot](https://i.imgur.com/1GbS5BB.png)
+
 
 
 
