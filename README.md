@@ -1,64 +1,36 @@
 # Mandelbrot
 
-A ready-to-go script to visualize the Mandelbrot set powered by Python and the Tkinter libreary. 
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+A ready-to-go script to visualize the Mandelbrot set powered by Python 3. 
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
-
+Both the external modules tkinter and getopt should be included in every standard Python installation (https://github.com/python/cpython).
+Just in case:
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+sudo apt-get install python3-tk
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Screenshots
-
-![Image obtained with parameters: ](https://i.imgur.com/Pypszdf.png)
-
-### Break down into end to end tests
+### Usage
 
 Explain what these tests test and why
 
+### Screenshots
+
 ```
-Give an example
+mandelbrot.py -s 3.5 -r 500 -i 50
 ```
+(https://i.imgur.com/1GbS5BB.png)
+
+
+```
+mandelbrot.py -s 1 -r 500 -i 100
+```
+(https://i.imgur.com/TPxfUpS.png)
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Tkinter](https://docs.python.org/2/library/tkinter.html) - The GUI framework used
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+* **Francesco Puddu** - [francescopuddu](https://github.com/francescopuddu)
