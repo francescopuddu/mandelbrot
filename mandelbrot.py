@@ -51,6 +51,7 @@ if __name__ == "__main__":
 	side = 0.0
 	resolution = 0
 	iterations = 0
+	opts = []
 
 	try:
 		opts, args = getopt.getopt(sys.argv[1:],"hs:r:i:",["help", "side=", "resolution=", "iterations="])
@@ -58,7 +59,7 @@ if __name__ == "__main__":
 		print('Wrong arguments. Please use option -h to get help.')
 		sys.exit(2)
 
-	if(len(sys.argv)==2 and opts and opts[0][0] in ("-h", "--help")):
+	if len(opts)==1 and opts[0][0] in ("-h", "--help"):
 		print('mandelbrot.py -s <side> -r <resolution> -i <iterations>')
 		sys.exit()
 
