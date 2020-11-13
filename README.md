@@ -36,10 +36,6 @@ mandelbrot.py -s 1 -r 500 -i 100
 ![example screenshot](https://i.imgur.com/TPxfUpS.png)
 
 
-## Built With
-
-* [Tkinter](https://docs.python.org/2/library/tkinter.html) - The GUI framework used
-
 ## Authors
 
 * **Francesco Puddu** - [francescopuddu](https://github.com/francescopuddu)
