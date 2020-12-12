@@ -5,12 +5,7 @@ A ready-to-go script to visualize the Mandelbrot set, powered by Python.
 Learn about the math behind the code here: (https://en.wikipedia.org/wiki/Mandelbrot_set)
 
 ### Prerequisites
-Both the external modules tkinter and getopt should be included in every standard Python 3 installation.
-
-Just in case:
-```
-sudo apt-get install python3-tk
-```
+OpenCV - https://pypi.org/project/opencv-python/
 
 ### Usage
 The script takes 3 parameters:
