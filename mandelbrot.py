@@ -1,15 +1,15 @@
-from tkinter import *
 import sys
 import getopt
-
+import cv2
+import numpy as np
 
 def color(window, comp, count):
-	red = hex(count % 4 * 64)[2:].zfill(2)
-	blue = hex(count % 8 * 32)[2:].zfill(2)
-	green = hex(count % 16 * 16)[2:].zfill(2)
-	color = "#" + red + green + blue
-	x, y = (comp.real), (comp.imag)
-	window.create_oval(x, y, x, y, outline=color)
+	red = int(hex(count % 4 * 64)[2:].zfill(2), 16)
+	blue = int(hex(count % 8 * 32)[2:].zfill(2), 16)
+	green = int(hex(count % 16 * 16)[2:].zfill(2), 16)
+
+	x, y = round((comp.real)), round((comp.imag))
+	window[y,x] = (blue,green,red)
 
 
 def map_to_canvas(comp, origin_x, origin_y, granularity):
@@ -33,18 +33,18 @@ def main(args):
 	gran = interval / res
 	origin_x = int(res/2)
 	origin_y = int(res/2)
+	w = np.zeros((res,res,3), np.uint8)
 
-	master = Tk()
-	master.title("Enjoy the Mandelbrot Set")
-	w = Canvas(master, width=res, height=res)
-	w.pack(expand=YES, fill=BOTH)
-
-	for re in range(-int(res/2)+1,int(res/2)+1):
-		for im in range(-int(res/2)+1,int(res/2)+1):
+	for re in range(-res//2,res//2):
+		for im in range(-res//2,res//2):
 			comp = complex(re*gran, im*gran)
 			mandelbrot(w, comp, gran, origin_x, origin_y, max_iterations)
 
-	mainloop()
+
+	out_img = cv2.resize(w, (1000, 1000))
+	out_img = cv2.fastNlMeansDenoisingColored(out_img,None,10,10,7,21)
+	cv2.imshow('mandelbrot',out_img)
+	cv2.waitKey(0)
 
 if __name__ == "__main__":
 
