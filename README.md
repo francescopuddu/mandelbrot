@@ -2,9 +2,9 @@
 
 A ready-to-go script to visualize the Mandelbrot set, powered by Python. 
 
-Learn about the math behind the code here: (https://en.wikipedia.org/wiki/Mandelbrot_set)
+Learn about the math behind the code here: https://en.wikipedia.org/wiki/Mandelbrot_set
 
-### Prerequisites
+### Dependencies
 OpenCV - https://pypi.org/project/opencv-python/
 
 ### Usage
