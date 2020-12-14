@@ -31,15 +31,14 @@ def main(args):
 	interval, res, max_iterations = args
 
 	gran = interval / res
-	origin_x = int(res/2)
-	origin_y = int(res/2)
+	origin_x = res//2
+	origin_y = res//2
 	w = np.zeros((res,res,3), np.uint8)
 
 	for re in range(-res//2,res//2):
 		for im in range(-res//2,res//2):
 			comp = complex(re*gran, im*gran)
 			mandelbrot(w, comp, gran, origin_x, origin_y, max_iterations)
-
 
 	out_img = cv2.resize(w, (1000, 1000))
 	out_img = cv2.fastNlMeansDenoisingColored(out_img,None,10,10,7,21)
@@ -91,7 +90,7 @@ if __name__ == "__main__":
 				except:
 					print("Invalid number of iterations: it must be a positive number.")
 					sys.exit(2)
-			elif opt not in ("-i", "--iter", "-r", "--res", "-s", "--side"):
+			else:
 				print('Wrong arguments. Please use option -h to get help.')
 				sys.exit()
 
