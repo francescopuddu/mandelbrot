@@ -1,6 +1,6 @@
 # Mandelbrot
 
-A ready-to-go script to explore the Mandelbrot set in the complex domain. 
+A ready-to-go tool to explore the Mandelbrot set in the complex domain. 
 
 Learn about the math here: https://en.wikipedia.org/wiki/Mandelbrot_set
 
